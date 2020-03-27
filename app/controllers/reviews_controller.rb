@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
     
     @review = Review.new(review_requirements)
     @review.save
-    redirect_to reviews_show(@review)
+    redirect_to review_path(@review)
   end
 
 
