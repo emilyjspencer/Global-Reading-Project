@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_130254) do
+ActiveRecord::Schema.define(version: 2020_03_27_144932) do
 
   create_table "regions", force: :cascade do |t|
     t.string "region"
     t.text "countries"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "title"
+    t.text "review"
   end
 
 end
