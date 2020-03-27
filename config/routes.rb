@@ -4,4 +4,11 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get 'about', to: 'pages#about'
+  get 'eastasia', to: 'pages#eastasia'
+  get 'europe', to: 'pages#europe'
+  get 'westasia', to: 'pages#westasia'
+  get 'southandsoutheastasia', to: 'pages#southandsoutheastasia'
+  get 'africanamerican', to: 'pages#africanamerican'
+  get 'southamerica', to: 'pages#southamerica'
+  
 end
