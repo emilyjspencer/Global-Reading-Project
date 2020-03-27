@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_requirements)
     if @review.save
-      flash[:notice] = "Your review was successfull created"
+      flash[:notice] = "Your review was successfully created"
       redirect_to review_path(@review)
     else
       render 'new'
