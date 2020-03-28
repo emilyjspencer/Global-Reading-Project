@@ -1,7 +1,16 @@
-<h1>Write a review</h1>
-
 
 <h1>Create a Review</h1>
+
+<% if @review.errors.any? %>
+ <h2>The following errors prevented the article from saving:</h2>
+ <ul>
+ <% @review.errors.full_messages.each do |x|%>
+ <li><%= x %></li>
+ <% end %>
+ </ul>
+<% end %>
+
+
 <%= form_for @review do |f| %>
   <p>
     <%= f.label :title %>

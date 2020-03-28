@@ -20,4 +20,9 @@ class ReviewsController < ApplicationController
   def review_requirements
      params.require(:review).permit(:title, :review)
   end
+
+
+
 end 
+
+  
