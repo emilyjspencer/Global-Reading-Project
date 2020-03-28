@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_28_143115) do
+ActiveRecord::Schema.define(version: 2020_03_28_151303) do
 
   create_table "regions", force: :cascade do |t|
     t.string "region"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_03_28_143115) do
   create_table "reviews", force: :cascade do |t|
     t.string "title"
     t.text "review"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
