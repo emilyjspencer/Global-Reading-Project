@@ -1,5 +1,8 @@
 class ReviewsController < ApplicationController
 
+  before_action :find_by_id, only: [:edit, :update, :show, :destroy]
+
+
   def new
     @review = Review.new
   end 
@@ -15,7 +18,6 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find(params[:id])
     if @review.update(review_requirements)
      flash[:notice] = "Your review was successfully updated"
      redirect_to review_path(@review)
@@ -26,7 +28,6 @@ class ReviewsController < ApplicationController
   end
 
   def show
-    @review = Review.find(params[:id])
   end
 
   def edit
@@ -38,7 +39,6 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review= Review.find(params[:id])
     @review.destroy
     flash[:notice] = "Your review was deleted"
     redirect_to reviews_path
@@ -51,6 +51,10 @@ class ReviewsController < ApplicationController
   def review_requirements
      params.require(:review).permit(:title, :review)
   end
+
+  def find_by_id
+    @review= Review.find(params[:id])
+  end 
 
 
 
