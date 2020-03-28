@@ -33,6 +33,10 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
+  def index
+    @reviews = Review.all
+  end
+
 
 
   private
