@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_requirements)
     if @review.save
-      flash[:notice] = "Your review was successfully created"
+      flash[:success] = "Your review was successfully created"
       redirect_to review_path(@review)
     else
       render 'new'
@@ -19,10 +19,10 @@ class ReviewsController < ApplicationController
 
   def update
     if @review.update(review_requirements)
-     flash[:notice] = "Your review was successfully updated"
+     flash[:success] = "Your review was successfully updated"
      redirect_to review_path(@review)
     else
-     flash[:notice] = "Your review was not updated"
+     flash[:success] = "Your review was not updated"
      render 'edit'
     end
   end
@@ -40,7 +40,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review.destroy
-    flash[:notice] = "Your review was deleted"
+    flash[:success] = "Your review was deleted"
     redirect_to reviews_path
    end
 
