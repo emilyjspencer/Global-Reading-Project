@@ -18,6 +18,12 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
+  def edit
+    @reviews = Review.all
+  end
+
+  
+
 
   private
 
