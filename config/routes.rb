@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'southandsoutheastasia', to: 'pages#southandsoutheastasia'
   get 'africanamerican', to: 'pages#africanamerican'
   get 'southamerica', to: 'pages#southamerica'
+  get 'caribbean', to: 'pages#caribbean'
   
   #get "reviews/new" => "reviews#new"
 

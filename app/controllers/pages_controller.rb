@@ -23,4 +23,7 @@ class PagesController < ApplicationController
     def americanamerican
     end 
 
+    def caribbean
+    end 
+
 end
