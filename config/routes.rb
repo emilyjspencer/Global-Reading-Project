@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'africanamerican', to: 'pages#africanamerican'
   get 'southamerica', to: 'pages#southamerica'
   
+  #get "reviews/new" => "reviews#new"
 
-  resources :articles
+  resources :reviews
 end
