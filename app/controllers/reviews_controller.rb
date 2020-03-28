@@ -14,6 +14,17 @@ class ReviewsController < ApplicationController
     end 
   end
 
+  def update
+    @review = Review.find(params[:id])
+    if @review.update(review_requirements)
+     flash[:notice] = "Your review was successfully updated"
+     redirect_to review_path(@review)
+    else
+     flash[:notice] = "Your review was not updated"
+     render 'edit'
+    end
+  end
+
   def show
     @review = Review.find(params[:id])
   end
@@ -22,7 +33,6 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
-  
 
 
   private
