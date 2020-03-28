@@ -1,11 +1,24 @@
 <% if @review.errors.any? %>
- <h2>The following errors prevented your review from being saved</h2>
- <ul>
- <% @review.errors.full_messages.each do |x|%>
- <li><%= x %></li>
- <% end %>
- </ul>
- <% end %>
+ <div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+   <div class="panel panel-danger">
+    <div class="panel-heading">
+     <h2 class="panel-title">
+      <%= pluralize(@review.errors.count, "error") %>
+      prohibited this review from being saved:
+     </h2>
+     <div class="panel-body">
+      <ul>
+       <% @review.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+       <% end %>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+<% end %>
 <div class="row">
 <div class="col-xs-12">
 <%= form_for(@review, :html => {class: "form-horizontal", role: "form"}) do |f| %>
