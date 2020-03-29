@@ -14,7 +14,7 @@ class PagesController < ApplicationController
     def westasia
     end 
 
-    def southamerica
+    def southandcentralamerica
     end 
 
     def southandsoutheastasia
