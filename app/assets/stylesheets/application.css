@@ -34,3 +34,15 @@
     color:  #ff66ff;
 }
 
+body {
+    background: linear-gradient(55deg, #ed65f2, #a6e9ea);
+}
+
+container-fluid {
+    background:  #c2d6d6;
+}
+
+navbar navbar-default {
+    background: #c2d6d6;;
+}
+

@@ -1,15 +1,15 @@
-<% if @obj.errors.any? %>
+<% if obj.errors.any? %>
  <div class="row">
   <div class="col-xs-8 col-xs-offset-2">
    <div class="panel panel-danger">
     <div class="panel-heading">
      <h2 class="panel-title">
-      <%= pluralize(@obj.errors.count, "error") %>
+      <%= pluralize(obj.errors.count, "error") %>
       prohibited this review from being saved:
      </h2>
      <div class="panel-body">
       <ul>
-       <% @obj.errors.full_messages.each do |msg|%>
+       <% obj.errors.full_messages.each do |msg|%>
         <li><%= msg %></li>
        <% end %>
       </ul>
@@ -27,7 +27,7 @@
   <%= f.label :title %><br>
   </div>
  <div class="col-sm-6">
- <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
+ <%= f.text_field :title, class: "form-control", placeholder: "Title of review", autofocus: true %>
  </div>
  </div>
  <div class="form-group">
@@ -40,7 +40,7 @@
   </div>
   <div class="form-group">
    <div class="col-sm-offset-2 col-sm-10">
-    <%= f.submit class: 'btn btn-primary btn-large' %>
+    <%= f.submit class: 'btn btn-info btn-large' %>
    </div>
   </div>
 <% end %>
