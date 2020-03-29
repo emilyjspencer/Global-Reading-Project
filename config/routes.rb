@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'africanamerican', to: 'pages#africanamerican'
   get 'southamerica', to: 'pages#southamerica'
   get 'caribbean', to: 'pages#caribbean'
+  get 'eastandwestafrica', to: 'pages#eastandwestafrica'
+  get 'northsouthandcentralafrica', to: 'pages#northsouthandcentralafrica'
   
   #get "reviews/new" => "reviews#new"
 

@@ -26,4 +26,10 @@ class PagesController < ApplicationController
     def caribbean
     end 
 
+    def eastandwestafrica
+    end 
+
+    def northsouthandcentralafrica
+    end 
+
 end
