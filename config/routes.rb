@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'westasia', to: 'pages#westasia'
   get 'southandsoutheastasia', to: 'pages#southandsoutheastasia'
   get 'africanamerican', to: 'pages#africanamerican'
-  get 'southamerica', to: 'pages#southamerica'
+  get 'southandcentralamerica', to: 'pages#southandcentralamerica'
   get 'caribbean', to: 'pages#caribbean'
   get 'eastandwestafrica', to: 'pages#eastandwestafrica'
   get 'northsouthandcentralafrica', to: 'pages#northsouthandcentralafrica'
