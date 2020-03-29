@@ -32,7 +32,7 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @review = Review.all
+    @reviews = Review.all
   end
 
   def index
